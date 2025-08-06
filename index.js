@@ -653,7 +653,7 @@ const country = [
   },
   {
     "countryName": "Sri Lanka",
-    "currency": "Sri Lankan Rupee"
+    "currency": "Sri Lanka Rupee"
   },
   {
     "countryName": "Sudan",
@@ -689,7 +689,7 @@ const country = [
   },
   {
     "countryName": "Tanzania",
-    "currency": "Tanzanian Shilling"
+    "currency": "Shilling"
   },
   {
     "countryName": "Thailand",
@@ -709,11 +709,11 @@ const country = [
   },
   {
     "countryName": "Tunisia",
-    "currency": "Tunisian Dinar"
+    "currency": "Dinar"
   },
   {
     "countryName": "Turkey",
-    "currency": "Turkish Lira"
+    "currency": "Lira"
   },
   {
     "countryName": "Turkmenistan",
@@ -721,19 +721,19 @@ const country = [
   },
   {
     "countryName": "Tuvalu",
-    "currency": "Tuvaluan Dollar"
+    "currency": "Tuvalu Dollar"
   },
   {
     "countryName": "Uganda",
-    "currency": "Ugandan New Shilling"
+    "currency": "New Shilling"
   },
   {
     "countryName": "Ukraine",
-    "currency": "Ukrainian hryvnia"
+    "currency": "hryvnia"
   },
   {
     "countryName": "United Arab Emirates",
-    "currency": "U.A.E. Dirham"
+    "currency": "Dirham"
   },
   {
     "countryName": "United Kingdom",
@@ -745,11 +745,11 @@ const country = [
   },
   {
     "countryName": "Uruguay",
-    "currency": "Uruguay Peso"
+    "currency": "Peso"
   },
   {
     "countryName": "Uzbekistan",
-    "currency": "Uzbekistani Sum"
+    "currency": "Sum"
   },
   {
     "countryName": "Vanuatu",
@@ -788,7 +788,7 @@ const input = document.querySelector('.searchBar');
 const filterForRender = function(data) {
     const lower = data.toLowerCase();
     return country
-        .filter(e => e.countryName.toLowerCase().startsWith(lower));
+        .filter(e => e.countryName.toLowerCase().startsWith(lower) || e.currency.toLowerCase().includes(lower));
 }
 
 const render = function(matches) {
